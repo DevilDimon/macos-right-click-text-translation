@@ -8,7 +8,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Vertaal met Google</string>
+				<string>Translate with Google</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>

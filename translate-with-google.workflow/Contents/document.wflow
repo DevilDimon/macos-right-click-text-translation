@@ -51,7 +51,14 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	set output to "https://translate.google.com/#en/nl/" &amp; urldecode(input as string)	return outputend runon urldecode(x)	set cmd to "'require \"cgi\"; puts CGI.escape(STDIN.read.chomp)'"	do shell script "echo " &amp; quoted form of x &amp; " | ruby -e " &amp; cmdend urldecode</string>
+					<string>on run {input, parameters}
+	set output to "https://translate.google.com/#fr/en/" &amp; urldecode(input as string)
+	return output
+end run
+on urldecode(x)
+	set cmd to "'require \"cgi\"; puts CGI.escape(STDIN.read.chomp)'"
+	do shell script "echo " &amp; quoted form of x &amp; " | ruby -e " &amp; cmd
+end urldecode</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
